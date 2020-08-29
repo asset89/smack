@@ -1,41 +1,55 @@
 {
   "images" : [
     {
+      "filename" : "Icon.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "Icon@2x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "Icon-Small.png",
+      "idiom" : "iphone",
+      "scale" : "1x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "Icon-Small@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "Icon-Small@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "Icon-Spotlight-40@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "Icon-Spotlight-40@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "Icon-60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "Icon-60@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -71,6 +85,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "Icon-iPadPro@2x.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
@@ -81,14 +96,40 @@
       "size" : "76x76"
     },
     {
+      "filename" : "smack1024-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "smack1024.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
+    },
+    {
+      "filename" : "Icon-Spotlight-40.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "Icon-Small-50.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "Icon-Small-50@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "Icon-60.png",
+      "idiom" : "universal",
+      "scale" : "1x",
+      "size" : "60x60"
     }
   ],
   "info" : {
