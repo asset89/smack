@@ -1,0 +1,115 @@
+
+Showing Recent Messages
+
+Build target Smack of project Smack with configuration Debug
+
+MkDir /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Smack.app (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    /bin/mkdir -p /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Smack.app
+
+MkDir /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Smack.app/Frameworks (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    /bin/mkdir -p /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Smack.app/Frameworks
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources/Entitlements-Simulated.plist (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources/Entitlements-Simulated.plist
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources/Entitlements.plist (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources/Entitlements.plist
+
+ProcessProductPackaging "" /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack.app-Simulated.xcent (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    
+
+Entitlements:
+
+{
+    "application-identifier" = "8XL3CTDGG8.com.asset-ryskul.Smack";
+    "keychain-access-groups" =     (
+        "8XL3CTDGG8.com.asset-ryskul.Smack"
+    );
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack.app-Simulated.xcent
+
+ProcessProductPackaging "" /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack.app.xcent (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    
+
+Entitlements:
+
+{
+    "com.apple.security.get-task-allow" = 1;
+}
+
+
+    builtin-productPackagingUtility -entitlements -format xml -o /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack.app.xcent
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/all-product-headers.yaml (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/all-product-headers.yaml
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack.hmap (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack.hmap
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-project-headers.hmap (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-project-headers.hmap
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-generated-files.hmap (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-generated-files.hmap
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-own-target-headers.hmap (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-all-target-headers.hmap (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-all-non-framework-target-headers.hmap (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Script-DE3E24202C770C56F474A87C.sh (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Script-DE3E24202C770C56F474A87C.sh
+
+PhaseScriptExecution [CP]\ Check\ Pods\ Manifest.lock /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Script-DE3E24202C770C56F474A87C.sh (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    /bin/sh -c /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Script-DE3E24202C770C56F474A87C.sh
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack-OutputFileMap.json (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack.LinkFileList (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack.LinkFileList
+
+WriteAuxiliaryFile /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack.SwiftFileList (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    write-file /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack.SwiftFileList
+
+CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name Smack -Onone -enable-batch-mode -enforce-exclusivity=checked -Xfrontend -disable-swift3-objc-inference @/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack.SwiftFileList -DDEBUG -D COCOAPODS -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk -target x86_64-apple-ios13.5-simulator -g -module-cache-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Index/DataStore -swift-version 5 -I /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Alamofire -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Starscream -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/SwiftyJSON -c -j4 -output-file-map /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack.swiftmodule -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-generated-files.hmap -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-own-target-headers.hmap -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-project-headers.hmap -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources-normal/x86_64 -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources/x86_64 -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -DCOCOAPODS=1 -emit-objc-header -emit-objc-header-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Objects-normal/x86_64/Smack-Swift.h -import-objc-header /Users/asset_ryskul/Desktop/Smack/Supporting\ Files/Smack-Bridging-Header.h -pch-output-dir /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/PrecompiledHeaders -working-directory /Users/asset_ryskul/Desktop/Smack
+
+warning: Could not read serialized diagnostics file: Cannot Load File: Failed to open diagnostics file (in target 'Smack' from project 'Smack')
+<unknown>:0: error: generate-pch command failed with exit code 1 (use -v to see invocation)
+
+PrecompileSwiftBridgingHeader normal x86_64 (in target 'Smack' from project 'Smack')
+    cd /Users/asset_ryskul/Desktop/Smack
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -target x86_64-apple-ios13.5-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.5.sdk -I /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Alamofire -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Starscream -F /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/SwiftyJSON -enable-testing -g -module-cache-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -swift-version 5 -enforce-exclusivity=checked -Onone -D DEBUG -D COCOAPODS -disable-swift3-objc-inference -serialize-debugging-options -Xcc -working-directory -Xcc /Users/asset_ryskul/Desktop/Smack -enable-anonymous-context-mangled-names -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-generated-files.hmap -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-own-target-headers.hmap -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/Smack-project-headers.hmap -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources-normal/x86_64 -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources/x86_64 -Xcc -I/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/Smack.build/Debug-iphonesimulator/Smack.build/DerivedSources -Xcc -DDEBUG=1 -Xcc -DCOCOAPODS=1 -serialize-diagnostics-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/PrecompiledHeaders/Smack-Bridging-Header-1WWCY092EN28S.dia /Users/asset_ryskul/Desktop/Smack/Supporting\ Files/Smack-Bridging-Header.h -index-store-path /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Index/DataStore -emit-pch -pch-output-dir /Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/PrecompiledHeaders
+
+<unknown>:0: error: error opening input file '/Users/asset_ryskul/Desktop/Smack/Supporting Files/Smack-Bridging-Header.h' (No such file or directory)
+<unknown>:0: error: cannot open file '/Users/asset_ryskul/Library/Developer/Xcode/DerivedData/Smack-aszydcccduoikcglsdjatgqnldum/Build/Intermediates.noindex/PrecompiledHeaders/Smack-Bridging-Header-1WWCY092EN28S.dia' for diagnostics emission (No such file or directory)
+Command PrecompileSwiftBridgingHeader failed with a nonzero exit code
+
