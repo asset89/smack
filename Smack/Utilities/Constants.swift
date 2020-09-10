@@ -23,7 +23,7 @@ let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
 //URL Constants
-let BASE_URL = "https://smackschat.herokuapp.com/v1/"
+let BASE_URL = "https://smackschat.herokuapp.com/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 
 
