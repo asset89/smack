@@ -103,4 +103,42 @@ class AuthService{
         }
     }
     
+    func createUser(name: String, email: String, avatarName: String, avatarColor: String, completion: @escaping CompletionHandler) {
+        let lowerCaseEmail = email.lowercased()
+        
+        let parameters : [String : String] = [
+            "name": name,
+            "email": lowerCaseEmail,
+            "avatarName": avatarName,
+            "avatarColor": avatarColor
+        ]
+        
+        let header: HTTPHeaders = [
+            "Authorization": "Bearer \(AuthService.instance.authToken)",
+            "Content-Type" : "application/json; charset=utf-8"
+            
+        ]
+        
+        AF.request(USER_ADD_URL, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: header).responseJSON { (responce) in
+            if responce.error == nil {
+                guard let data = responce.data else {return}
+                do {
+                    let json = try JSON(data: data)
+                    let id = json["_id"].stringValue
+                    let name = json["name"].stringValue
+                    let email = json["email"].stringValue
+                    let avatarName = json["avatarName"].stringValue
+                    let avatarColor = json["avatarColor"].stringValue
+                    UserDataService.instance.setUserData(id: id, avatarColor: avatarColor, avatarName: avatarName, email: email, name: name)
+                } catch {
+                    debugPrint(responce.error?.errorDescription as Any)
+                }
+                completion(true)
+            } else {
+                completion(false)
+                debugPrint(responce.error as Any)
+            }
+        }
+    }
+    
 }
