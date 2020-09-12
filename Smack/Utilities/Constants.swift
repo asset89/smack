@@ -17,6 +17,7 @@ let SW_REAR = "sw_rear"
 let SW_FRONT = "sw_front"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWIND_TO_CHANNEL = "unwindToChannel"
+let TO_AVATAR_PICKER = "toAvatarPicker"
 
 //user defaults
 let TOKEN_KEY = "token"
