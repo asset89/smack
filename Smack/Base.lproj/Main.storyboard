@@ -225,6 +225,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButton_Pressed:" destination="mna-fQ-LXx" eventType="touchUpInside" id="wAu-At-1gL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-lX-g2I">
                                 <rect key="frame" x="82.5" y="434" width="249" height="30"/>
@@ -273,6 +276,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ra6-hU-XDN">
+                                <rect key="frame" x="188.5" y="309.5" width="37" height="37"/>
+                                <color key="color" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -280,8 +287,10 @@
                             <constraint firstItem="3yI-yc-r8a" firstAttribute="top" secondItem="Uzf-dr-vV6" secondAttribute="bottom" constant="40" id="BA8-iT-X4X"/>
                             <constraint firstItem="Uzf-dr-vV6" firstAttribute="top" secondItem="dYi-7w-Xj9" secondAttribute="bottom" constant="40" id="KOi-a3-qoI"/>
                             <constraint firstItem="dYi-7w-Xj9" firstAttribute="top" secondItem="VyK-mP-uGz" secondAttribute="top" constant="60" id="LF6-hT-PZe"/>
+                            <constraint firstItem="Ra6-hU-XDN" firstAttribute="centerX" secondItem="kXv-Tz-SHx" secondAttribute="centerX" id="VaO-lC-W9T"/>
                             <constraint firstItem="VyK-mP-uGz" firstAttribute="trailing" secondItem="Uzf-dr-vV6" secondAttribute="trailing" constant="30" id="W4z-eW-rYv"/>
                             <constraint firstItem="Ae5-lX-g2I" firstAttribute="centerX" secondItem="kXv-Tz-SHx" secondAttribute="centerX" id="XJK-Wt-4dP"/>
+                            <constraint firstItem="Ra6-hU-XDN" firstAttribute="centerY" secondItem="kXv-Tz-SHx" secondAttribute="centerY" constant="-120" id="YGo-yw-Fsf"/>
                             <constraint firstItem="3yI-yc-r8a" firstAttribute="leading" secondItem="VyK-mP-uGz" secondAttribute="leading" constant="30" id="n6O-Za-M3o"/>
                             <constraint firstItem="VyK-mP-uGz" firstAttribute="trailing" secondItem="tay-fI-N3g" secondAttribute="trailing" constant="10" id="pse-kS-2Ha"/>
                             <constraint firstItem="VyK-mP-uGz" firstAttribute="trailing" secondItem="3yI-yc-r8a" secondAttribute="trailing" constant="30" id="q2j-Si-Npm"/>
@@ -293,6 +302,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="2HA-z5-VYQ"/>
                     <connections>
+                        <outlet property="passwordTxt" destination="0zm-qu-xak" id="M85-NT-XW2"/>
+                        <outlet property="spinner" destination="Ra6-hU-XDN" id="o3a-EQ-NAc"/>
+                        <outlet property="usernameTxt" destination="msH-ea-MCf" id="0Ds-aQ-Whv"/>
                         <segue destination="rwh-hY-H8i" kind="show" identifier="toCreateAccount" id="5fO-m3-GMW"/>
                     </connections>
                 </viewController>

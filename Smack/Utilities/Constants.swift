@@ -29,9 +29,14 @@ let BASE_URL = "https://smackschat.herokuapp.com/v1/"
 let REGISTER_URL = "\(BASE_URL)account/register"
 let LOGIN_URL = "\(BASE_URL)account/login"
 let USER_ADD_URL = "\(BASE_URL)user/add"
+let USER_BY_EMAIL_URL = "\(BASE_URL)user/byEmail/"
 
 //Headers
 let HEADERS: HTTPHeaders = [
+    "Content-Type" : "application/json; charset=utf-8"
+]
+let BEARER_HEADER: HTTPHeaders = [
+    "Authorization": "Bearer \(AuthService.instance.authToken)",
     "Content-Type" : "application/json; charset=utf-8"
 ]
 
