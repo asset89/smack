@@ -127,9 +127,7 @@ class AuthService{
     
     func findUserByEmail(completion: @escaping CompletionHandler) {
         
-        let body = ["":""]
-        
-        AF.request("\(USER_BY_EMAIL_URL)\(userEmail)", method: .get, parameters: body, encoder: JSONParameterEncoder.default, headers: BEARER_HEADER).responseJSON { (responce) in
+        AF.request("\(USER_BY_EMAIL_URL)\(userEmail)", method: .get, headers: BEARER_HEADER).responseJSON { (responce) in
             if responce.error == nil {
                 guard let data = responce.data else {return}
                 self.setupUser(data: data)

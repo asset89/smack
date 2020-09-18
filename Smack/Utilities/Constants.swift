@@ -30,6 +30,7 @@ let REGISTER_URL = "\(BASE_URL)account/register"
 let LOGIN_URL = "\(BASE_URL)account/login"
 let USER_ADD_URL = "\(BASE_URL)user/add"
 let USER_BY_EMAIL_URL = "\(BASE_URL)user/byEmail/"
+let GET_CHANNEL_URL = "\(BASE_URL)channel/"
 
 //Headers
 let HEADERS: HTTPHeaders = [
