@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ChannelVC: UIViewController {
+class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Outlets
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImageView: CircleImageView!
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
@@ -19,10 +20,25 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.size.width - 70
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGED, object: nil)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        SocketServices.instance.getChannel { (success) in
+            if success {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
+    }
+    
+    @IBAction func addChannelButton_Pressed(_ sender: Any) {
+        let addChannelVC = AddChannelVC()
+        addChannelVC.modalPresentationStyle = .custom
+        present(addChannelVC, animated: true, completion: nil)
     }
     
     @IBAction func loginButton_Pressed(_ sender: Any) {
@@ -49,6 +65,19 @@ class ChannelVC: UIViewController {
             userImageView.image = UIImage(named: "menuProfileIcon")
             userImageView.backgroundColor = UIColor.clear
         }
+    }
+    
+    //MARK: - tableview delegate & datasource
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.channels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell {
+            cell.configureCell(channel: MessageService.instance.channels[indexPath.row])
+            return cell
+        }
+        return UITableViewCell()
     }
     
 
