@@ -43,7 +43,8 @@ let BEARER_HEADER: HTTPHeaders = [
 
 //Notification constants
 let NOTIF_USER_DATA_DID_CHANGED = Notification.Name(rawValue: "notifUserDataChanged")
-
+let NOTIF_CHANNEL_LOADED = Notification.Name(rawValue: "channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name(rawValue: "channelSelected")
 //colors
 let smackPurplePlaceholder = #colorLiteral(red: 0.3568627451, green: 0.6235294118, blue: 0.7960784314, alpha: 0.5)
 
