@@ -72,7 +72,7 @@ class AuthService{
             "password": password
         ]
         
-        AF.request(LOGIN_URL, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: HEADERS).responseJSON { (responce) in
+        AF.request(LOGIN_URL, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: HEADERS).responseString { (responce) in
             if responce.error == nil {
 //                if let json = responce.value as? Dictionary<String, Any> {
 //                    if let email = json["user"] as? String {
@@ -86,8 +86,8 @@ class AuthService{
                 guard let data = responce.data else {return}
                 do {
                     let json = try JSON(data: data)
-                    self.userEmail = json["user"].stringValue
-                    self.authToken = json["token"].stringValue
+                    self.userEmail = json["username"].stringValue
+                    self.authToken = json["hash"].stringValue
                     
                 } catch {
                     debugPrint(responce.error?.errorDescription as Any)
@@ -113,7 +113,7 @@ class AuthService{
             "avatarColor": avatarColor
         ]
         
-        AF.request(USER_ADD_URL, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: BEARER_HEADER).responseJSON { (responce) in
+        AF.request(USER_ADD_URL, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: BEARER_HEADER).responseString { (responce) in
             if responce.error == nil {
                 guard let data = responce.data else {return}
                 self.setupUser(data: data)
@@ -127,7 +127,7 @@ class AuthService{
     
     func findUserByEmail(completion: @escaping CompletionHandler) {
         
-        AF.request("\(USER_BY_EMAIL_URL)\(userEmail)", method: .get, headers: BEARER_HEADER).responseJSON { (responce) in
+        AF.request("\(USER_BY_EMAIL_URL)\(userEmail)", method: .get, headers: BEARER_HEADER).responseString { (responce) in
             if responce.error == nil {
                 guard let data = responce.data else {return}
                 self.setupUser(data: data)

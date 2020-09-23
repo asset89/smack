@@ -23,7 +23,6 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.channelsLoaded(_:)), name: NOTIF_CHANNEL_LOADED, object: nil)
         tableView.delegate = self
         tableView.dataSource = self
-        
         SocketServices.instance.getChannel { (success) in
             if success {
                 self.tableView.reloadData()

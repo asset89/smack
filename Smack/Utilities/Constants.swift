@@ -31,6 +31,7 @@ let LOGIN_URL = "\(BASE_URL)account/login"
 let USER_ADD_URL = "\(BASE_URL)user/add"
 let USER_BY_EMAIL_URL = "\(BASE_URL)user/byEmail/"
 let GET_CHANNEL_URL = "\(BASE_URL)channel/"
+let GET_CHANNEL_MESSAGES = "\(BASE_URL)message/byChannel"
 
 //Headers
 let HEADERS: HTTPHeaders = [
