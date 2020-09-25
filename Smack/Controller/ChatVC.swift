@@ -8,13 +8,23 @@
 
 import UIKit
 
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var channelNameLabel: UILabel!
+    @IBOutlet weak var messageTxtBox: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 80.0
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
 
         menuButton.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -31,6 +41,10 @@ class ChatVC: UIViewController {
     
     @objc func channelSelected(_ notif: Notification) {
         updateChannelName()
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     func updateChannelName() {
@@ -60,10 +74,41 @@ class ChatVC: UIViewController {
         }
     }
     
+    @IBAction func sendMessage_Pressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = messageTxtBox.text else { return }
+            
+            SocketServices.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
+                if success {
+                    self.messageTxtBox.text = ""
+                    self.messageTxtBox.resignFirstResponder()
+                }
+            })
+        }
+    }
+    
     func getMessages() {
         guard let channelId = MessageService.instance.selectedChannel?.id else {return}
         MessageService.instance.findAllMessagesforChannel(channelId: channelId) { (success) in
-            <#code#>
+            if success {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    // MARK: - tableview
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        MessageService.instance.messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
+            let message = MessageService.instance.messages[indexPath.row]
+            cell.configureCell(message: message)
+            return cell
+        } else {
+            return UITableViewCell()
         }
     }
 
