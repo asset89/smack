@@ -64,13 +64,24 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        SocketServices.instance.getMessages { (success) in
-            if success {
+//        SocketServices.instance.getMessages { (success) in
+//            if success {
+//                self.tableView.reloadData()
+//                if MessageService.instance.messages.count > 0 {
+//                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+//                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+//                }
+//            }
+//        }
+        SocketServices.instance.getMessages { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
                 if MessageService.instance.messages.count > 0 {
                     let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
                 }
+                
             }
         }
         
