@@ -14,6 +14,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var channelNameLabel: UILabel!
     @IBOutlet weak var messageTxtBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var typingLabel: UILabel!
+    
+    var isTyping: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +25,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableView.automaticDimension
-        
+        sendButton.isHidden = true
         view.bindToKeyboard()
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
         view.addGestureRecognizer(tap)
@@ -32,6 +36,44 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGED, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
+        
+        SocketServices.instance.getTypingUsers { (typingUsers) in
+            guard let channelId = MessageService.instance.selectedChannel?.id else {return}
+            var names = ""
+            var numberOfTypes = 0
+            
+            for (typingUser, channel) in typingUsers {
+                if typingUser != UserDataService.instance.name && channel == channelId {
+                    if names == "" {
+                        names = typingUser
+                    } else {
+                        names = "\(names), \(typingUser)"
+                    }
+                    numberOfTypes += 1
+                }
+            }
+            
+            if numberOfTypes > 0 && AuthService.instance.isLoggedIn == true {
+                var verb = "is"
+                if numberOfTypes > 0 {
+                    verb = "are"
+                }
+                self.typingLabel.text = "\(names) \(verb) typing a message"
+            } else {
+                self.typingLabel.text = ""
+            }
+        }
+        
+        SocketServices.instance.getMessages { (success) in
+            if success {
+                self.tableView.reloadData()
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                }
+            }
+        }
+        
         if AuthService.instance.isLoggedIn {
             AuthService.instance.findUserByEmail { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGED, object: nil)
@@ -58,9 +100,24 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             onLoginGetMessages()
         } else {
             channelNameLabel.text = "Please log in"
+            tableView.reloadData()
         }
     }
     
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        guard let channelId = MessageService.instance.selectedChannel?.id else {return}
+        if messageTxtBox.text == "" {
+            isTyping = false
+            sendButton.isHidden = true
+            SocketServices.instance.socket.emit("stopType", UserDataService.instance.name, channelId )
+        } else {
+            if isTyping == false {
+                sendButton.isHidden = false
+                SocketServices.instance.socket.emit("startType", UserDataService.instance.name, channelId )
+            }
+            isTyping = true
+        }
+    }
     func onLoginGetMessages() {
         MessageService.instance.findAllChannels { (success) in
             if success {
@@ -83,6 +140,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if success {
                     self.messageTxtBox.text = ""
                     self.messageTxtBox.resignFirstResponder()
+                    SocketServices.instance.socket.emit("stopType", UserDataService.instance.name, channelId )
                 }
             })
         }
